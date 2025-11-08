@@ -81,12 +81,19 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 # DATABASE (Azure PostgreSQL)
 # -----------------------------
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://agiaeucdmy@lab-server1:password@lab-server1.postgres.database.azure.com:5432/lab-database',
-        conn_max_age=600,
-        ssl_require=False  # ✅ Disable SSL for POC, enable True in production
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lab-database',
+        'USER': 'agiaeucdmy',
+        'PASSWORD': 'Pass12345!',
+        'HOST': 'lab-server1.postgres.database.azure.com',
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+        },
+    }
 }
+
 
 # -----------------------------
 # PASSWORD VALIDATION
