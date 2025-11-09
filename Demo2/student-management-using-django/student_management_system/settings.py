@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'student_management_system.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lab-database',
-        'USER': 'agiaeucdmy',
-        'PASSWORD': 'Pass12345!',
-        'HOST': 'lab-server1.postgres.database.azure.com',
+        'NAME': 'smp',
+        'USER': 'admin01',
+        'PASSWORD': 'Pass12345@#',
+        'HOST': 'students.postgres.database.azure.com',
         'PORT': '5432',
         'OPTIONS': {
             'sslmode': 'require',
