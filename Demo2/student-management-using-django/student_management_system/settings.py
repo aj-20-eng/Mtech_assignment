@@ -17,11 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # -----------------------------
 SECRET_KEY = 'django-insecure-poc-key-do-not-use-in-prod'
 DEBUG = True  # ✅ Keep True for POC testing
-ALLOWED_HOSTS = [
-    'labcloud.azurewebsites.net',
-    'localhost',
-    '127.0.0.1'
-]
+ALLOWED_HOSTS = ['*']
 
 # -----------------------------
 # APPLICATIONS
